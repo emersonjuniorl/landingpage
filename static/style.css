@@ -1,23 +1,36 @@
+/* Estilo global */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
+    line-height: 1.6;
 }
+
+/* Cabeçalho */
 header {
     background: #007BFF;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 10px;
     text-align: center;
 }
-main {
-    padding: 20px;
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
 }
-section {
-    margin-bottom: 20px;
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0;
 }
-button {
+
+/* Centralizar e estilizar botões */
+header button,
+main button {
+    display: block; /* Torna o botão um elemento de bloco */
+    margin: 10px auto; /* Centraliza horizontalmente */
     background-color: #25D366;
     color: white;
     padding: 10px 20px;
@@ -25,6 +38,91 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
 button:hover {
     background-color: #1da851;
+}
+
+/* Remover sublinhado de links e garantir estilo consistente */
+a {
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+a button {
+    display: block;
+    margin: 10px auto;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a button:hover {
+    background-color: #1da851;
+}
+
+/* Corpo principal */
+main {
+    padding: 20px;
+    text-align: justify; /* Justifica o texto */
+}
+
+h1, h2, p {
+    text-align: center; /* Centraliza títulos e parágrafos */
+}
+
+ul {
+    padding-left: 20px;
+    list-style: disc;
+    text-align: left; /* Mantém listas alinhadas à esquerda */
+}
+
+section {
+    margin: 0 auto; /* Centraliza horizontalmente o conteúdo */
+    max-width: 800px; /* Define uma largura máxima para melhor leitura */
+    margin-bottom: 20px;
+}
+
+/* Layout responsivo */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 6px 12px;
+    }
+}
+
+/* Centralizar imagens */
+.image-container {
+    text-align: center; /* Centraliza o conteúdo dentro do container */
+    margin: 20px 0; /* Adiciona espaço acima e abaixo */
+}
+
+.image-container img {
+    max-width: 50%; /* Define a largura como 50% do container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Adiciona cantos arredondados, opcional */
+    display: inline-block; /* Garante que a imagem fique centralizada no texto */
 }
