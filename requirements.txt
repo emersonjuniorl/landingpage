@@ -50,3 +50,5 @@ urllib3==2.3.0
 userpath==1.9.2
 virtualenv==20.28.0
 wcwidth==0.2.13
+flask
+gunicorn
